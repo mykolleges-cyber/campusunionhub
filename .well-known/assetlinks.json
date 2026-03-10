@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.uptopcareers.app",
+      "sha256_cert_fingerprints":
+        ["83:FF:FA:B3:5C:91:CF:F2:DB:74:1A:25:90:1E:ED:60:AD:2A:1D:12:07:6E:D0:7B:F7:99:D4:E7:B4:6A:E1:87"]
+    }
+  }
+]
