@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>Campus Union Hub — You've Been Referred!</title>
-  <meta name="description" content="Your friend invited you to explore an amazing program on Campus Union Hub. Download the app and start your journey today." />
+  <title>Uptop careers — You've Been Referred!</title>
+  <meta name="description" content="Your friend invited you to explore an amazing program on Uptop careers. Download the app and start your journey today." />
 
   <!-- Open Graph / WhatsApp / iMessage preview -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://campusunionhub.com/ref" />
   <meta property="og:title"       content="You've been referred to a program!" />
-  <meta property="og:description" content="Join Campus Union Hub — refer programs, earn rewards. Download the app now." />
+  <meta property="og:description" content="Join Uptop careers — refer programs, earn rewards. Download the app now." />
   <meta property="og:image"       content="https://campusunionhub.com/assets/og-image.png" />
 
   <style>
@@ -18,19 +18,19 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --blue:      #1A73E8;
-      --blue-dark: #1558B0;
-      --green:     #34A853;
-      --bg:        #F0F4FF;
-      --card:      #FFFFFF;
-      --text:      #1C1C1E;
-      --sub:       #6B7280;
-      --radius:    18px;
-      --shadow:    0 8px 32px rgba(26,115,232,.14);
+      --blue:      #4169E1;
+      --orange:    #FF6B35;
+      --green:     #22C55E;
+      --bg:        #0F172A;
+      --card:      #1E293B;
+      --text:      #F8FAFC;
+      --sub:       #94A3B8;
+      --radius:    8px;
+      --shadow:    0 4px 24px rgba(0,0,0,.4);
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
       background: var(--bg);
       min-height: 100dvh;
       display: flex;
@@ -41,23 +41,13 @@
       color: var(--text);
     }
 
-    /* ── Animated gradient background ── */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
-      background: linear-gradient(135deg, #1A73E8 0%, #6C47FF 60%, #1A73E8 100%);
-      background-size: 300% 300%;
-      animation: gradientShift 8s ease infinite;
-      opacity: .08;
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(65,105,225,.15) 0%, transparent 60%);
       pointer-events: none;
       z-index: 0;
-    }
-
-    @keyframes gradientShift {
-      0%   { background-position: 0% 50%; }
-      50%  { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
 
     /* ── Card ── */
@@ -73,64 +63,62 @@
       text-align: center;
     }
 
-    /* ── Logo / brand ── */
     .brand {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      margin-bottom: 28px;
+      gap: 14px;
+      margin-bottom: 24px;
     }
 
-    .brand-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--blue), #6C47FF);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
+    .brand-logo-wrap {
+      background: #fff;
+      padding: 6px 10px;
+      border-radius: 6px;
     }
 
-    .brand-icon svg { width: 24px; height: 24px; fill: #fff; }
+    .brand-logo {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
 
     .brand-name {
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: -.3px;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: .5px;
       color: var(--text);
+      text-transform: lowercase;
     }
 
-    /* ── Referral badge ── */
     .badge {
       display: inline-block;
-      background: linear-gradient(90deg, #FFF3CD, #FFEAA7);
-      color: #B45309;
-      font-size: 12px;
+      background: rgba(255,107,53,.2);
+      color: #FF6B35;
+      font-size: 11px;
       font-weight: 600;
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-bottom: 20px;
-      letter-spacing: .5px;
+      padding: 5px 14px;
+      border-radius: 4px;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
-    /* ── Program card ── */
     .program-box {
-      background: linear-gradient(135deg, #EEF2FF 0%, #F0F7FF 100%);
-      border: 1px solid #E0E7FF;
-      border-radius: 14px;
+      background: rgba(65,105,225,.12);
+      border: 1px solid rgba(65,105,225,.25);
+      border-radius: var(--radius);
       padding: 20px 18px;
       margin-bottom: 24px;
       text-align: left;
     }
 
     .program-label {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 600;
-      color: var(--blue);
+      color: var(--sub);
       text-transform: uppercase;
-      letter-spacing: .8px;
+      letter-spacing: 1.2px;
       margin-bottom: 6px;
     }
 
@@ -166,13 +154,13 @@
     .reward-pill {
       display: flex;
       align-items: center;
-      gap: 5px;
-      background: #DCFCE7;
-      color: #15803D;
-      font-size: 13px;
+      gap: 6px;
+      background: rgba(34,197,94,.2);
+      color: #22C55E;
+      font-size: 12px;
       font-weight: 600;
-      padding: 5px 12px;
-      border-radius: 20px;
+      padding: 6px 12px;
+      border-radius: 4px;
     }
 
     /* ── Headline ── */
@@ -212,31 +200,25 @@
     .btn:active { transform: scale(.97); }
 
     .btn-android {
-      background: linear-gradient(135deg, #34A853, #1E8449);
+      background: #22C55E;
       color: #fff;
-      box-shadow: 0 4px 18px rgba(52,168,83,.35);
-      margin-bottom: 12px;
+      box-shadow: none;
+      margin-bottom: 10px;
     }
 
-    .btn-ios {
-      background: linear-gradient(135deg, #1A73E8, #1558B0);
-      color: #fff;
-      box-shadow: 0 4px 18px rgba(26,115,232,.35);
-      margin-bottom: 12px;
-    }
+    .btn-android:hover { background: #16A34A; }
 
     .btn-universal {
-      background: linear-gradient(135deg, var(--blue) 0%, #6C47FF 100%);
+      background: var(--blue);
       color: #fff;
-      box-shadow: 0 6px 24px rgba(26,115,232,.4);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .btn-secondary {
-      background: #F3F4F6;
+      background: rgba(148,163,184,.15);
       color: var(--sub);
-      font-size: 13px;
-      font-weight: 600;
+      font-size: 12px;
+      font-weight: 500;
       padding: 12px;
     }
 
@@ -263,40 +245,39 @@
     }
 
     .step-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: #EEF2FF;
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      background: rgba(65,105,225,.2);
       margin: 0 auto 6px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
+      font-size: 16px;
     }
 
     .step-text {
-      font-size: 11px;
+      font-size: 10px;
       color: var(--sub);
-      line-height: 1.4;
+      line-height: 1.35;
     }
 
-    /* ── Arrow divider ── */
     .step-arrow {
-      font-size: 18px;
-      color: #CBD5E1;
+      font-size: 14px;
+      color: #475569;
       align-self: flex-start;
-      padding-top: 12px;
+      padding-top: 14px;
     }
 
     /* ── Footer ── */
     .footer {
-      margin-top: 20px;
-      font-size: 11px;
-      color: #9CA3AF;
+      margin-top: 24px;
+      font-size: 10px;
+      color: #64748B;
       text-align: center;
     }
 
-    .footer a { color: #9CA3AF; text-decoration: underline; }
+    .footer a { color: #94A3B8; text-decoration: none; }
 
     /* ── Divider ── */
     .divider {
@@ -311,7 +292,7 @@
       content: '';
       flex: 1;
       height: 1px;
-      background: #E5E7EB;
+      background: #334155;
     }
 
     /* ── Hidden ── */
@@ -321,16 +302,14 @@
 <body>
 
 <div class="card">
-  <!-- Brand header -->
   <div class="brand">
-    <div class="brand-icon">
-      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+    <div class="brand-logo-wrap">
+      <img src="../assets/uptop-logo.png" alt="Uptop careers" class="brand-logo" />
     </div>
-    <span class="brand-name">Campus Union Hub</span>
+    <span class="brand-name">Uptop careers</span>
   </div>
 
-  <!-- Referral badge -->
-  <div class="badge">🎁 &nbsp;Personal Referral Invite</div>
+  <div class="badge">Referral invite</div>
 
   <!-- Program preview -->
   <div class="program-box">
@@ -374,21 +353,13 @@
     Redirecting to store in <span id="countdown">3</span>s…
   </div>
 
-  <!-- Android button (shown on Android) -->
   <a id="btn-android" href="#" class="btn btn-android hidden" onclick="redirectAndroid(event)">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M3.18 23.76c.37.21.8.22 1.18.04l12.72-7.34-2.82-2.82-11.08 10.12zm-1.52-17.7a1.5 1.5 0 0 0-.16.66v14.56c0 .23.05.46.16.67l.07.07 8.16-8.16v-.19L1.73 5.99l-.07.07zM20.25 10.2l-2.71-1.57-3.07 3.06 3.07 3.07 2.73-1.58c.78-.45.78-1.53-.02-1.98zm-18.59 11.5l11.08-10.13-2.82-2.82L1.73 21.7l-.07.07z"/></svg>
     Download on Google Play
   </a>
 
-  <!-- iOS button (shown on iOS) -->
-  <a id="btn-ios" href="#" class="btn btn-ios hidden" onclick="redirectIOS(event)">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-    Download on the App Store
-  </a>
-
-  <!-- Universal fallback button (shown when platform unknown) -->
   <a id="btn-universal" href="#" class="btn btn-universal hidden" onclick="redirectUniversal(event)">
-    📲 &nbsp;Download Campus Union Hub
+    Get Uptop careers on Google Play
   </a>
 
   <!-- Divider -->
@@ -416,7 +387,6 @@
 
   // ── Package IDs ───────────────────────────────────────────────────────────
   const ANDROID_PKG  = 'com.uptopcareers.app';
-  const IOS_APP_ID   = '0000000000'; // TODO: replace with real App Store numeric ID
   const CUSTOM_SCHEME = 'campusunionhub';
 
   // ── Detect platform ───────────────────────────────────────────────────────
@@ -431,11 +401,6 @@
                       + '&referralCode=' + referralCode;
     return 'https://play.google.com/store/apps/details?id=' + ANDROID_PKG
            + '&referrer=' + encodeURIComponent(referrerRaw);
-  }
-
-  // ── Build App Store URL ───────────────────────────────────────────────────
-  function buildAppStoreUrl() {
-    return 'https://apps.apple.com/app/id' + IOS_APP_ID;
   }
 
   // ── Build custom-scheme URL (open if app installed) ───────────────────────
@@ -458,40 +423,28 @@
     el.classList.remove('loading');
   }
 
-  // ── Show the right CTA buttons ────────────────────────────────────────────
   function show(id) { document.getElementById(id).classList.remove('hidden'); }
-  function hide(id) { document.getElementById(id).classList.add('hidden'); }
 
   if (isAndroid) {
     show('btn-android');
     show('open-divider');
     document.getElementById('open-divider').style.display = '';
     show('btn-open-app');
-  } else if (isIOS) {
-    show('btn-ios');
+  } else {
+    show('btn-universal');
     show('open-divider');
     document.getElementById('open-divider').style.display = '';
     show('btn-open-app');
-  } else {
-    // Desktop / unknown — show both store buttons
-    show('btn-android');
-    show('btn-ios');
   }
 
-  // ── Click handlers ────────────────────────────────────────────────────────
   function redirectAndroid(e) {
     e.preventDefault();
     window.location.href = buildPlayStoreUrl();
   }
 
-  function redirectIOS(e) {
-    e.preventDefault();
-    window.location.href = buildAppStoreUrl();
-  }
-
   function redirectUniversal(e) {
     e.preventDefault();
-    window.location.href = isAndroid ? buildPlayStoreUrl() : buildAppStoreUrl();
+    window.location.href = buildPlayStoreUrl();
   }
 
   function openInApp(e) {
@@ -501,10 +454,6 @@
     window.location.href = buildCustomSchemeUrl();
   }
 
-  // ── Auto-redirect countdown (3 s) for mobile users ───────────────────────
-  // We give Android App Links / iOS Universal Links a chance to intercept
-  // BEFORE the page even loads; if we're here it means the app isn't installed.
-  // So we auto-redirect to the appropriate store after a short countdown.
   if (isAndroid || isIOS) {
     const wrap      = document.getElementById('countdown-wrap');
     const countEl   = document.getElementById('countdown');
@@ -518,11 +467,7 @@
       if (remaining <= 0) {
         clearInterval(timer);
         wrap.textContent = 'Redirecting…';
-        if (isAndroid) {
-          window.location.href = buildPlayStoreUrl();
-        } else {
-          window.location.href = buildAppStoreUrl();
-        }
+        window.location.href = buildPlayStoreUrl();
       }
     }, 1000);
   }
